@@ -1,0 +1,5 @@
+SOURCES supply many ARTICLES
+USERS can subscribe to many SOURCES
+ARTICLES are delivered to many USERS
+SOURCES also generate TWEETS
+TWEETS are supplied to users alongside ARTICLES
