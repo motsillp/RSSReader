@@ -1,5 +1,11 @@
 SOURCES supply many ARTICLES
 USERS can subscribe to many SOURCES
 ARTICLES are delivered to many USERS
-SOURCES also generate TWEETS
-TWEETS are supplied to users alongside ARTICLES
+ARTICLES are linked to TAGS
+USERS can also follow TAGS
+USERS can store articles to read later
+
+// The following rules are only to be used if we can figure out the twitter api
+// SOURCES also generate TWEETS
+// TWEETS are supplied to users alongside ARTICLES
+// TWEETS have TAGS
