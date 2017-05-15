@@ -16,6 +16,7 @@ public class RSSParser {
     ArrayList<String> titles = new ArrayList<String>();
     ArrayList<String> descriptions = new ArrayList<String>();
     ArrayList<String> links = new ArrayList<String>();
+    ArrayList<String> images = new ArrayList<String>();
 
     public RSSParser(String feed_url)
     {
@@ -34,11 +35,13 @@ public class RSSParser {
         return links.get(position);
     }
 
+
     void parseRSS_String(String RSS)
     {
         String title = "";
         String link = "";
         String description = "";
+        String img_url = "";
 
 
         try
@@ -85,6 +88,17 @@ public class RSSParser {
                                 case "description":
                                     description = text;
                                     descriptions.add(description);
+                                    break;
+
+                                case "url":
+                                    // try converting the stream from the url to drawable in main program
+                                    img_url = text;
+                                    images.add(img_url);
+                                    break;
+
+                                case "link":
+                                    link = text;
+                                    links.add(link);
                                     break;
                             }
                     }
