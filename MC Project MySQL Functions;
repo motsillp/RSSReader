@@ -1,0 +1,30 @@
+FUNCTIONS FOR MC PROJECT
+
+// = Might be cut out
+ADDING RECORDS
+1.ADD_CATEGORY(category_name VARCHAR(20))
+	adds a Category into the CATEGORIES table;
+2.ADD_USER(user_email VARCHAR(64), user_password VARCHAR(65), user_preferences VARCHAR(100))
+	adds a User into the USERS table;
+3.ADD_INTEREST(user_email VARCHAR(64),category_name VARCHAR(20))
+	adds a user's Interest in a Category into the INTEREST table
+4.ADD_USERFEED(user_email VARCHAR(64),feed_name VARCHAR(100))
+	adds a user's subscription to a Feed into the USERFEEDS table.
+5.ADD_TAG(article_title VARCHAR(100),category_name VARCHAR(20))
+	adds a Tag that joins an Article to a Category into the TAGS table
+6.ADD_READARTICLE(user_email VARCHAR(64),article_title VARCHAR(100))
+	adds a key that shows that a User has Read an Article
+7.ADD_FEED(feed_name VARCHAR(100), feed_url TEXT)
+	adds a Feed into the FEEDS table.
+8.ADD_ARTICLE(article_title VARCHAR(100),article_url TEXT,article_descript TEXT,article_image TEXT,feed_id INT(9))
+	adds Article and its info into the ARTICLES table.
+
+GET PROCEDURES
+1.GETUSERFEEDS(user_email VARCHAR(64))
+	gets the feeds the user is subscribed to.
+2.
+REMOVING RECORDS
+1.
+
+UPDATING RECORDS
+
