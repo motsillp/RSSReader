@@ -114,6 +114,24 @@ public class AddTags extends Activity {
                             }
                         };
                         AsyncAddTag.execute();
+                    }
+                }
+
+                for(int i = 0; i < myTagsLL.getChildCount();i++){
+                    CheckBox box = (CheckBox)myTagsLL.getChildAt(i);
+                    if(!box.isChecked()){
+                        String tagName = box.getText().toString();
+                        ContentValues params = new ContentValues();
+                        params.put("email",user_email);
+                        params.put("tag",tagName);
+                        AsyncHTTPRequest AsyncDeleteTag = new AsyncHTTPRequest(
+                                "http://lamp.ms.wits.ac.za/~s1312548/remove_tags.php",params) {
+                            @Override
+                            protected void onPostExecute(String output) {
+                                Log.d("TAGS",output);
+                            }
+                        };
+                        AsyncDeleteTag.execute();
 
                     }
                 }
